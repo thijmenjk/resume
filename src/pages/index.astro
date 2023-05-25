@@ -1,81 +1,255 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import { Icon } from "astro-icon";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
-</Layout>
+<Layout title="Thijmen Kurk - Curriculum Vitae">
+  <header>
+    <!-- <Icon name="lucide:smartphone" /> -->
+  </header>
 
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-</style>
+  <main class="p-10 flex lg:justify-center">
+    <article class="prose text-justify">
+      <h1>Thijmen J. Kurk</h1>
+
+      <p>
+        <i>Software Developer & Data Scientist</i><br />
+        <i class="text-gray-400">Zwolle, The Netherlands</i><br />
+        <a href="mailto:thijmen@exante.ai">thijmen@exante.ai</a><br />
+      </p>
+      <p>Fluent languages: Dutch and English</p>
+      <p>
+        I am a passionate IT professional, specializing in software development
+        and data analysis. With a commitment to delivering superior quality, I
+        have a proven track record of rapidly learning and integrating new
+        technologies into my work. My unique blend of HBO and WO education,
+        coupled with my practical work experience, equips me with the ability to
+        seamlessly link theoretical knowledge to practical application. Being
+        aware of my youth and the endless opportunities to learn, I am excited
+        to expand my knowledge and skills. I am eager to take on new challenges
+        that will help me grow and develop further.
+      </p>
+      <hr />
+      <h2>Traits and Skills</h2>
+      <div class="flex gap-1 mb-3">
+        {
+          [
+            "Critical thinker",
+            "Effective communicator",
+            "Practically minded",
+            "Autodidact",
+            "Autonomous",
+            "Team player",
+            "Patient & Disciplined",
+            "Creative",
+          ].map((x) => (
+            <span class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+              {x}
+            </span>
+          ))
+        }
+      </div>
+      <div class="flex gap-1 mb-3">
+        {
+          [
+            "OOP",
+            "Functional programming",
+            "Data analysis & visualization",
+            "Applied statistics & machine learning",
+            "Architecting IT solutions",
+            "Web development",
+          ].map((x) => (
+            <span class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+              {x}
+            </span>
+          ))
+        }
+      </div>
+      <hr />
+      <h2>Languages and Technologies</h2>
+      <div class="flex gap-1 mb-3">
+        {
+          [
+            "Python",
+            "C#",
+            "Scala",
+            "Java",
+            "SQL",
+            "TypeScript & JavaScript",
+            "R",
+            "HTML & CSS",
+            "C/C++",
+            "PHP",
+            "Rust",
+            "Regex",
+          ].map((x) => (
+            <span class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+              {x}
+            </span>
+          ))
+        }
+      </div>
+      <div class="flex gap-1 mb-3">
+        {
+          [
+            "Linux",
+            "Git & GitHub",
+            "Pandas",
+            "React",
+            "Numpy",
+            ".NET Core",
+            "PyTorch",
+            "Docker",
+            "Vercel",
+            "Spark",
+            "Amazon Web Services",
+          ].map((x) => (
+            <span class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+              {x}
+            </span>
+          ))
+        }
+      </div>
+      <div class="flex gap-1">
+        {
+          [
+            "Jupyter Notebooks",
+            "FastAPI",
+            "ASP.NET",
+            "Spring framework",
+            "RabbitMQ",
+            "Redis",
+            "tRPC",
+            "Angular",
+            "Express",
+          ].map((x) => (
+            <span class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+              {x}
+            </span>
+          ))
+        }
+      </div>
+      <p>
+        <i
+          >* Lists are ordered from left to right by proficiency, the left side
+          being most proficient.
+        </i>
+      </p>
+      <hr />
+      <h2>Education</h2>
+      <ul>
+        <li>
+          <i>2018 - 2022</i> / <strong
+            >Master Computer Science (joint degree)</strong
+          >, 8.6<br />
+          <i class="text-gray-400"
+            >Vrije Universiteit Amsterdam and University of Amsterdam</i
+          >
+          <br />
+          Thesis on Automated Data Management for Microservice Architectures
+        </li>
+        <li>
+          <i>2017 - 2018</i> / <strong>Pre-Master Computer Science</strong>, 9.2<br
+          />
+          <i class="text-gray-400">Vrije Universiteit Amsterdam</i>
+        </li>
+        <li>
+          <i>2014 - 2017</i> / <strong>Bachelor HBO-ICT</strong>, 8.5<br />
+          <i class="text-gray-400">University of Applied Sciences Windesheim</i>
+        </li>
+      </ul>
+      <hr />
+      <h2>Work Experience</h2>
+      <ul>
+        <li>
+          <i>2019 - present</i> / Co-founder & technical director @ <strong
+            >Exante.ai</strong
+          >
+          <br />
+          <i class="text-gray-400">Zwolle, The Netherlands</i><br />
+          As Co-Founder and Technical Director at Exante.ai, I've led a blend of
+          AI consultancy and software development, including projects like data analysis
+          for solar cooling systems and an automatic student-internship allocation
+          system for StageMonitor. Additionally, we've developed innovative software
+          products such as GPT-Detective, a tool for detecting AI-written text. A
+          detailed description of our work at Exante.ai can be found <a
+            href="https://exante.ai/referenties/"
+            class="inline-flex items-center mb-0"
+          >
+            here
+            <Icon class="w-5 h-5 ml-2" name="lucide:external-link" />
+          </a>
+        </li>
+        <li>
+          <i>2020 - 2020</i> / Intern @ <strong>Databricks</strong>
+          <br />
+          <i class="text-gray-400">Amsterdam, The Netherlands</i><br />Selected
+          from over 1100 candidates to work at Databricks, I've been engaged in
+          cutting-edge research focusing on two primary questions. First, I've
+          been exploring strategies to achieve sub-millisecond latency by
+          addressing bottlenecks in the current Spark scheduler, a complex
+          endeavor due to inherent architectural challenges. Second, I have
+          worked on designing and building a scalable scheduling architecture to
+          efficiently handle large cluster sizes and highly concurrent
+          workloads.
+        </li>
+        <li>
+          <i>2018 - 2019</i> / Teacher Assistent @ <strong
+            >Vrije Universiteit Amsterdam</strong
+          ><br />
+          <i class="text-gray-400">Amsterdam, The Netherlands</i>
+          <br />As a Teacher Assistant for Advanced Programming and Statistical
+          Methods courses, I guided and graded Bachelor students on theoretical
+          and practical programming assignments, facilitating their learning in
+          Scala and R programming languages.
+        </li>
+        <li>
+          <i>2017 - 2018</i> / Software Engineer @ <strong>Körbler</strong>
+          <br />
+          <i class="text-gray-400">Graz, Austria</i><br />
+          From my home in Dronten, I worked remotely as a software engineer for Körbler
+          in Graz, Austria, developing modules for their CRM system using PHP.
+        </li>
+        <li>
+          <i>2017 - 2017</i> / Bachelor Thesis @ <strong>NCIM Group</strong><br
+          />
+          <i class="text-gray-400">The Hague, The Netherlands</i><br />I
+          developed a RESTful API in C#, including a query language and access
+          control layer, to dynamically expose data models within a database.
+        </li>
+        <li>
+          <i>2017 - 2017</i> / Bachelor Internship @ <strong>Körbler</strong><br
+          />
+          <i class="text-gray-400">Graz, Austria</i><br />Using PHP, I developed
+          an API and SDK combination for Körbler that dynamically exposes their
+          internal databases to third parties, a solution now actively used in
+          production by both internal developers and external entities.
+        </li>
+      </ul>
+      <hr />
+      <h2>Public Projects</h2>
+      <ul>
+        <li>
+          <i>2019 - 2019</i> / <a
+            href="https://event.cwi.nl/lsde/2022/showcase_l1.shtml"
+            class="inline-flex items-center mb-0"
+          >
+            Earth imaging time-travel animations
+            <Icon class="w-5 h-5 ml-2" name="lucide:external-link" />
+          </a><br />We analyzed, processed, and visualized Landsat satellite
+          imagery, creating the LSDE Earth Viewer, a tool to observe geolocation
+          changes over time using Web Mercator projection.
+        </li><li>
+          <i>2019 - 2019</i> / <a
+            href="https://github.com/GreenLab-Kebab/gl-kebab"
+            class="inline-flex items-center mb-0"
+          >
+            An Empirical Analysis of JavaScript Dead Code in the Wild
+            <Icon class="w-5 h-5 ml-2" name="lucide:external-link" />
+          </a><br />We investigated the effect of JavaScript dead code on the
+          load time and energy consumption of mobile web apps.
+        </li>
+      </ul>
+    </article>
+  </main>
+</Layout>
