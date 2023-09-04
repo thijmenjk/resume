@@ -1,5 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+const birthday = new Date(1996, 2, 10);
+const delta = Date.now() - birthday.getTime();
+const age = Math.floor(delta / 1000 / 60 / 60 / 24 / 365.25);
 ---
 
 <Layout title="Thijmen Kurk - Curriculum Vitae">
@@ -7,11 +11,15 @@ import Layout from "../layouts/Layout.astro";
     <article class="prose lg:text-justify" style="margin: 0 auto">
       <div class="grid grid-cols-3">
         <div class="col-span-2">
-          <h1>Thijmen J. Kurk, 27</h1>
+          <h1>Thijmen J. Kurk, {age}</h1>
           <p>
             <i>Software Engineer & Data Scientist</i><br />
-            <i class="text-gray-400">Zwolle, The Netherlands</i><br />
+            <i class="text-gray-400">Zwolle, The Netherlands</i><br /><br />
+            <a href="mailto:thijmen.j.kurk@gmail.com"
+              >thijmen.j.kurk@gmail.com</a
+            > /
             <a href="mailto:thijmen@exante.ai">thijmen@exante.ai</a><br />
+            +31 6 27 404 770
           </p>
           <p>Bilingual: Dutch and English</p>
         </div>
