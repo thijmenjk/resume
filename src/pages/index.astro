@@ -1,19 +1,15 @@
 ---
 import Layout from "../layouts/Layout.astro";
-
-const birthday = new Date(1996, 2, 10);
-const delta = Date.now() - birthday.getTime();
-const age = Math.floor(delta / 1000 / 60 / 60 / 24 / 365.25);
 ---
 
 <Layout title="Thijmen Kurk - Curriculum Vitae">
-  <main class="p-10">
-    <article class="prose lg:text-justify" style="margin: 0 auto">
-      <div class="grid grid-cols-3">
-        <div class="col-span-2">
-          <h1>Thijmen J. Kurk, {age}</h1>
+  <main class="mx-auto max-w-5xl px-4 py-6 sm:px-6 sm:py-10 lg:px-8">
+    <article class="prose prose-neutral max-w-none text-pretty lg:text-justify">
+      <div class="grid gap-6 border-b border-zinc-200 pb-8 sm:grid-cols-[1fr_180px] sm:items-start">
+        <div>
+          <h1>Thijmen J. Kurk</h1>
           <p>
-            <i>Software Engineer & Data Scientist</i><br />
+            <i>Software Engineer</i><br />
             <i class="text-gray-400">Zwolle, The Netherlands</i><br /><br />
             <a href="mailto:thijmen.j.kurk@gmail.com"
               >thijmen.j.kurk@gmail.com</a
@@ -23,135 +19,46 @@ const age = Math.floor(delta / 1000 / 60 / 60 / 24 / 365.25);
             <br />
             Bilingual: Dutch and English
             <br />
-            Driver License: B
+            Driver's License: B
           </p>
-          <p></p>
         </div>
-        <div>
-          <img src="/photo.png" class="rounded-full" />
+        <div class="mx-auto w-full max-w-[180px] sm:mx-0">
+          <img
+            src="/photo.png"
+            alt="Portrait of Thijmen Kurk"
+            class="aspect-square w-full rounded-3xl object-cover shadow-sm ring-1 ring-zinc-200"
+          />
         </div>
       </div>
       <p>
-        I am a passionate IT professional specializing in software development and data analysis. My combination of HBO and WO education, along with practical experience, allows me to bridge the gap between theory and practice. I am always looking to learn and tackle new challenges. Beyond my technical expertise, I am driven and open in my communication, believing in the power of teamwork and knowledge sharing to achieve goals. In addition to computer science, my other passion is sports, which helps keep my mind sharp and body fit, contributing to my overall productivity and well-being. In short, my combination of technical expertise, communication skills, and personal passions makes me a versatile and enthusiastic professional who is always striving for growth and improvement.
+        Software engineer focused on backend systems, distributed
+        architectures, and product delivery. I build reliable systems end to
+        end, from system design and implementation to rollout and operational
+        improvement, with experience across internal platforms, customer-facing
+        SaaS products, and AI-enabled features. My strongest work has been in
+        technically demanding environments where architecture quality and
+        measurable performance gains both matter.
       </p>
       <hr />
-      <h2>Traits and Skills</h2>
-      <div
-        class="flex gap-1 mb-3 md:overflow-visible overflow-scroll print:overflow-visible max-w-[65ch]"
-      >
-        {
-          [
-            "Critical thinker",
-            "Effective communicator",
-            "Practically minded",
-            "Autodidact",
-            "Autonomous",
-            "Team player",
-            "Patient & Disciplined",
-            "Creative",
-          ].map((x) => (
-            <span class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
-              {x}
-            </span>
-          ))
-        }
-      </div>
-      <div
-        class="flex gap-1 mb-3 md:overflow-visible overflow-scroll print:overflow-visible max-w-[65ch]"
-      >
-        {
-          [
-            "OOP",
-            "Functional programming",
-            "Data analysis & visualization",
-            "Applied statistics & machine learning",
-            "Architecting IT solutions",
-            "Web development",
-          ].map((x) => (
-            <span class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
-              {x}
-            </span>
-          ))
-        }
-      </div>
-      <hr />
-      <h2>Languages and Technologies</h2>
-      <div>
-        <div
-          class="flex gap-1 mb-3 md:overflow-visible overflow-scroll print:overflow-visible max-w-[65ch]"
-        >
-          {
-            [
-              "Python",
-              "Azure DevOps",
-              "Scala",
-              "Java",
-              "SQL",
-              "TypeScript & JavaScript",
-              "R",
-              "HTML & CSS",
-              "C/C++",
-              "PHP",
-              "Rust",
-              "Regex",
-            ].map((x) => (
-              <span class="inline-flex items-center rounded-md bg-gray-50 bg-opacity-70 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
-                {x}
-              </span>
-            ))
-          }
-        </div>
-        <div
-          class="flex gap-1 mb-3 md:overflow-visible overflow-scroll print:overflow-visible max-w-[65ch]"
-        >
-          {
-            [
-              "C#",
-              "Git",
-              "Pandas",
-              ".NET Core",
-              "React",
-              "Numpy",
-              "PyTorch",
-              "Docker",
-              "Vercel",
-              "Spark",
-              "Amazon Web Services",
-            ].map((x) => (
-              <span class="inline-flex items-center rounded-md bg-gray-50 bg-opacity-70 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
-                {x}
-              </span>
-            ))
-          }
-        </div>
-        <div
-          class="flex gap-1 md:overflow-visible overflow-scroll print:overflow-visible max-w-[65ch]"
-        >
-          {
-            [
-              "Jupyter Notebooks",
-              "FastAPI",
-              "ASP.NET",
-              "Azure",
-              "UML",
-              "Spring framework",
-              "RabbitMQ",
-              "Redis",
-              "Angular",
-            ].map((x) => (
-              <span class="inline-flex items-center rounded-md bg-gray-50 bg-opacity-70 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
-                {x}
-              </span>
-            ))
-          }
-        </div>
-      </div>
-
+      <h2>Technical Skills</h2>
       <p>
-        <i
-          >* Lists are ordered from left to right by proficiency, the left side
-          being most proficient.
-        </i>
+        <strong>Primary:</strong> TypeScript, JavaScript, Python, C#, SQL
+      </p>
+      <p>
+        <strong>Backend & Architecture:</strong> .NET Core, ASP.NET, FastAPI,
+        distributed systems, event-driven architectures, API design, system
+        design, performance optimization
+      </p>
+      <p>
+        <strong>Frontend:</strong> React, HTML, CSS, Astro, Angular
+      </p>
+      <p>
+        <strong>Data & AI:</strong> Pandas, NumPy, Spark, PyTorch, machine
+        learning, LLM product integration, observability
+      </p>
+      <p>
+        <strong>Platform & DevOps:</strong> Azure, AWS, Docker, Git, Azure
+        DevOps, Redis, RabbitMQ, Vercel
       </p>
       <hr />
       <h2>Education</h2>
@@ -159,12 +66,26 @@ const age = Math.floor(delta / 1000 / 60 / 60 / 24 / 365.25);
         <li>
           <i>2018 - 2022</i> / <strong
             >Master Computer Science (joint degree)</strong
-          >, 8.6<br />
+          >, 8.6, cum laude<br />
           <i class="text-gray-400"
             >Vrije Universiteit Amsterdam and University of Amsterdam</i
           >
-          <br />
-          For my thesis, I addressed data management challenges in microservice architectures (MSAs), such as distributed transactions, data consistency, and efficient integration. I developed a system to implement distributed transactions and introduced a new layer for data consistency and integration, automatically synchronizing a relational model between services. Validated through end-to-end and manual tests, this system provides a reusable method for coordinating transactions, maintaining data consistency, and integrating data efficiently, simplifying the development and management of MSA-based systems.
+          <ul>
+            <li>
+              <a href="/thesis.pdf" class="inline-flex items-center mb-0"
+                >Thesis on data management challenges in microservice
+                architectures</a
+              >, including distributed transactions, data consistency, and
+              service integration.
+            </li>
+            <li>
+              Developed a reusable approach for coordinating transactions and
+              synchronizing a relational model across services.
+            </li>
+            <li>
+              Validated the approach through end-to-end and manual testing.
+            </li>
+          </ul>
         </li>
         <li>
           <i>2017 - 2018</i> / <strong>Pre-Master Computer Science</strong>, 9.2<br
@@ -180,44 +101,179 @@ const age = Math.floor(delta / 1000 / 60 / 60 / 24 / 365.25);
       <h2>Work Experience</h2>
       <ul>
         <li>
-          <i>2023 - present</i> / Senior Software Developer @ <strong
+          <i>2024 - Present</i> / Senior Software Engineer @ <strong
+            >Wehkamp</strong
+          >
+          <br />
+          <i class="text-gray-400">Zwolle, The Netherlands</i><br />
+          <ul>
+            <li>
+              Built the Image Management System (IMS) from the ground up to
+              replace Wehkamp's legacy image platform, building both frontend
+              and backend for a modern internal product serving 30+ users and
+              processing up to 30,000 images per day.
+            </li>
+            <li>
+              Owned the architecture end to end across backend and frontend,
+              from system design through implementation, with a focus on
+              maintainability and operational reliability.
+            </li>
+            <li>
+              Improved order management performance by 10x in a core workflow
+              by addressing processing bottlenecks.
+            </li>
+            <li>
+              Helped drive AI adoption by introducing Langfuse for
+              observability, contributing to the shopping assistant, and
+              building a PIM-focused AI concept that won first place in an
+              internal hackathon.
+            </li>
+            <li>
+              Implemented image segmentation and classification model
+              integrations to support image-processing workflows in production.
+            </li>
+            <li>
+              Contributed to high-performance infrastructure projects,
+              including systems for merging multiple data streams efficiently
+              and an internal tool for Kafka topic migration during broker
+              decommissioning.
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <i>2023 - 2024</i> / Senior Software Developer @ <strong
             >Suneco</strong
           >
           <br />
           <i class="text-gray-400">Zwolle, The Netherlands</i><br />
-          I develop custom software projects, collaborating closely with clients. Recently, I contributed to migrating Innofeet's legacy portal from C# with ASP.NET 4.5 to .NET 8. The project involved restructuring the monolithic portal into an API and WebApp. Leading a team of two developers, I managed the transition to .NET 8, created the API, and set up OTAP environments in Azure. I developed tools to expedite the process, including one that automated converting synchronous to asynchronous functions and another that efficiently compared millions of data rows between databases to ensure system validation.
+          <ul>
+            <li>
+              Developed custom software projects in close collaboration with
+              clients.
+            </li>
+            <li>
+              At Innofeet, helped migrate a legacy portal from C# and ASP.NET
+              4.5 to .NET 8, splitting the monolith into a separate API and web
+              application.
+            </li>
+            <li>
+              Led a team of two developers, built the API, and set up OTAP
+              environments in Azure.
+            </li>
+            <li>
+              Created migration tooling, including automation for converting
+              synchronous code to asynchronous code and a validator that
+              compared millions of database rows to verify the new system
+              against the legacy implementation.
+            </li>
+          </ul>
         </li>
 
         <li>
-          <i>2019 - present</i> / Co-founder @ <strong>Exante.ai</strong>
+          <i>2019 - Present</i> / Co-founder (part-time, alongside employment) @
+          <strong>Exante.ai</strong>
           <br />
           <i class="text-gray-400">Zwolle, The Netherlands</i><br />
-          I've led a blend of AI consultancy and software development projects at Exante.ai. Notable achievements include developing an automatic student-internship allocation system for StageMonitor using a minimum-cost flow algorithm, which automates matching students with internships in healthcare settings. I also developed <a href="https://apeelingai.com/" class="inline-flex items-center mb-0">ApeelingAI</a>, a SaaS platform with dynamic, context-aware chatbots that enhance client website engagement, which has already served more than 1,000 users. Additionally, I created <a href="https://gpt-detective.nl" class="inline-flex items-center mb-0">GPT-Detective</a>, the first European tool to detect AI-generated text in Dutch, used by over 10,000 users to scan 55,000 documents.
+          <ul>
+            <li>
+              Built and shipped software products and consultancy projects
+              alongside full-time employment, covering product development,
+              backend systems, and AI-enabled user experiences.
+            </li>
+            <li>
+              Built an automatic student-internship allocation system for
+              StageMonitor using a minimum-cost flow algorithm to match
+              students to healthcare internships.
+            </li>
+            <li>
+              Built <a href="https://apeelingai.com/" class="inline-flex items-center mb-0">ApeelingAI</a>, a SaaS platform for dynamic,
+              context-aware chatbots that has served 1,000+ users.
+            </li>
+            <li>
+              Created <a href="https://gpt-detective.nl" class="inline-flex items-center mb-0">GPT-Detective</a>, an early Dutch-language AI text
+              detection tool used by 10,000+ users to scan 55,000 documents.
+            </li>
+            <li>
+              Developed <a href="https://lovitations.nl/" class="inline-flex items-center mb-0">Lovitations</a>, a boutique wedding website platform
+              with AI-assisted copy and RSVP flows, and <a href="https://mijnrouwkaart.nl/" class="inline-flex items-center mb-0">MijnRouwkaart</a>, a digital funeral card and
+              memorial-page platform for sharing practical information,
+              condolences, and memories in a respectful way.
+            </li>
+          </ul>
         </li>
         <li>
-          <i>2020 - 2020</i> / Intern @ <strong>Databricks</strong>
+          <i>2020</i> / Intern @ <strong>Databricks</strong>
           <br />
-          <i class="text-gray-400">Amsterdam, The Netherlands</i><br />        
-          Selected from over 1100 candidates for a project at Databricks, I conducted research to improve the Spark scheduler, focusing on interactive workloads. I optimized the existing scheduler and developed a new architecture by separating scheduler logic from RPC processing, batch processing status updates, and deploying multiple task schedulers in parallel. The goal was to achieve sub-millisecond latency by addressing key bottlenecks. Testing on a Spark OS 3.1.0 prototype revealed network delays and instability in the central RPC queue at scale. My new scheduler design, which pushed tasks to executors, improved throughput by 17x and significantly increased scheduler efficiency, achieving sub-millisecond latencies in large clusters.
+          <i class="text-gray-400">Amsterdam, The Netherlands</i><br />
+          <ul>
+            <li>
+              Selected from 1,100+ candidates for an internship project at
+              Databricks.
+            </li>
+            <li>
+              Researched Spark scheduler improvements for interactive
+              workloads, optimizing the existing scheduler and developing a new
+              architecture that separated scheduler logic from RPC processing,
+              batched status updates, and deployed multiple schedulers in
+              parallel.
+            </li>
+            <li>
+              In prototype testing on Spark 3.1.0, the new design improved
+              throughput by 17x and achieved sub-millisecond latency in large
+              clusters.
+            </li>
+            <li>
+              The work also exposed network and central RPC queue bottlenecks
+              at scale.
+            </li>
+          </ul>
         </li>
         <li>
-          <i>2018 - 2019</i> / Teacher Assistent @ <strong
+          <i>2018 - 2019</i> / Teaching Assistant @ <strong
             >Vrije Universiteit Amsterdam</strong
           ><br />
           <i class="text-gray-400">Amsterdam, The Netherlands</i>
-          <br />As a Teacher Assistant for Advanced Programming and Statistical
-          Methods courses, I guided and graded Bachelor students on theoretical
-          and practical programming assignments, facilitating their learning in
-          Scala and R programming languages.
+          <ul>
+            <li>
+              Teaching Assistant for Advanced Programming and Statistical
+              Methods courses.
+            </li>
+            <li>
+              Guided and graded bachelor students on theoretical and practical
+              assignments in Scala and R.
+            </li>
+          </ul>
         </li>
         <li>
-          <i>2017 - 2018</i> / Software Engineer @ <strong>Körbler</strong>, <i class="text-gray-400">Graz, Austria</i>
+          <i>2017 - 2018</i> / Software Engineer @ <strong>Körbler</strong><br />
+          <i class="text-gray-400">Graz, Austria</i>
+          <ul>
+            <li>
+              Worked on client-facing software projects in an international
+              environment after completing my internship.
+            </li>
+          </ul>
         </li>
         <li>
-          <i>2017</i> / Bachelor Graduation Internship @ <strong>NCIM Group</strong>, <i class="text-gray-400">The Hague, The Netherlands</i>
+          <i>2017</i> / Bachelor Graduation Internship @ <strong>NCIM Group</strong><br />
+          <i class="text-gray-400">The Hague, The Netherlands</i>
+          <ul>
+            <li>
+              Completed my graduation internship on a professional software
+              project as part of the HBO-ICT program.
+            </li>
+          </ul>
         </li>
         <li>
-          <i>2017</i> / Bachelor Internship @ <strong>Körbler</strong>,  <i class="text-gray-400">Graz, Austria</i>
+          <i>2017</i> / Bachelor Internship @ <strong>Körbler</strong><br />
+          <i class="text-gray-400">Graz, Austria</i>
+          <ul>
+            <li>
+              Completed an internship in Austria focused on practical software
+              engineering in a production setting.
+            </li>
+          </ul>
         </li>
       </ul>
       <hr />
@@ -237,21 +293,33 @@ const age = Math.floor(delta / 1000 / 60 / 60 / 24 / 365.25);
         </li>
         <li>
           <i>2019</i> / <a
-            href="https://event.cwi.nl/lsde/2022/showcase_l1.shtml"
+            href="/group09.pdf"
             class="inline-flex items-center mb-0"
           >
             Earth Imaging Time-Travel Animations
-          </a><br />We analyzed, processed, and visualized Landsat satellite
-          imagery, creating the LSDE Earth Viewer, a tool to observe geolocation
-          changes over time using Web Mercator projection.
+          </a>
+          <ul>
+            <li>
+              Analyzed, processed, and visualized Landsat satellite imagery.
+            </li>
+            <li>
+              Built the LSDE Earth Viewer to observe geolocation changes over
+              time using Web Mercator projection.
+            </li>
+          </ul>
         </li><li>
           <i>2019</i> / <a
             href="https://github.com/GreenLab-Kebab/gl-kebab"
             class="inline-flex items-center mb-0"
           >
             An Empirical Analysis of JavaScript Dead Code in the Wild
-          </a><br />We investigated the effect of JavaScript dead code on the
-          load time and energy consumption of mobile web apps.
+          </a>
+          <ul>
+            <li>
+              Investigated the effect of JavaScript dead code on mobile web app
+              load time and energy consumption.
+            </li>
+          </ul>
         </li>
       </ul>
     </article>
